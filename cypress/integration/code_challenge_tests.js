@@ -1,8 +1,3 @@
-function alphabeticalShows(shows) {
-  let aShowsZ = [];
-
-}
-
 // DOES THE SHOW OBJECT HAVE A POSTER IMAGE:
 const show = {name: "Wolcott, Jr.", posterImg: undefined};
 function checkShowPosterImg(show) {
@@ -38,3 +33,28 @@ describe("Check showing show's details modal", function() {
     })
   })
 })
+
+// DOES THE SEARCHBAR INPUT FILTER SHOWS:
+const shows = ["Hamilton", "The Lion King", "Wicked", "Frozen", "Aladdin"];
+const userInput = "In";
+function checkShowsFilter(shows, userInput) {
+  let filteredShows = shows;
+  filteredShows.filter(shows => show.toLowerCase().includes(userInput.toLowerCase()));
+  if(filteredShows === ["The Lion King", "Aladdin"] || ["Aladdin", "The Lion King"]) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+describe
+
+// (UNFINISHED) ARE THE LIST OF SHOWS ALPHABETICAL:
+// const shows = ["Hamilton", "The Lion King", "Wicked", "Frozen", "Aladdin"]
+// function alphabeticalShows(shows) {
+//   let aShowsZ = show;
+//   aShowsZ.sort();
+//   for (let show of aShowsZ) {
+//   }
+//   if()
+// }
