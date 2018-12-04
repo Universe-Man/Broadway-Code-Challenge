@@ -34,7 +34,7 @@ describe("Check showing show's details modal", function() {
   })
 })
 
-// DOES THE SEARCHBAR INPUT FILTER SHOWS:
+// (PROBLEM WITH LOWERCASING AN ARRAY) DOES THE SEARCHBAR INPUT FILTER SHOWS:
 const shows = ["Hamilton", "The Lion King", "Wicked", "Frozen", "Aladdin"];
 const userInput = "In";
 function checkShowsFilter(shows, userInput) {
@@ -47,7 +47,13 @@ function checkShowsFilter(shows, userInput) {
   }
 }
 
-describe
+describe("Is filter working", function() {
+  context("search filter", function() {
+    it("is filtering shows with user input", function() {
+      expect(checkShowsFilter(shows, userInput)).to.eq(true);
+    })
+  })
+})
 
 // (UNFINISHED) ARE THE LIST OF SHOWS ALPHABETICAL:
 // const shows = ["Hamilton", "The Lion King", "Wicked", "Frozen", "Aladdin"]
